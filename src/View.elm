@@ -74,7 +74,9 @@ loginField model =
         ][]
         ,br[][]]
     Just user ->
+      div [][
       text ("Welcome " ++ user.userName)
+      , button[onClick Logout][text "Logout"]]
 
 
 userListView : List String -> Html Msg
@@ -87,7 +89,8 @@ userListView string =
 
 userView : String -> Html Msg
 userView string =
-  div[] [ text (string ++ "\n")]
+  div[] [ text (string ++ "\n")
+    ]
 
 
 viewMessage : ChatMessage -> Html msg

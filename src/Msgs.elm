@@ -9,3 +9,4 @@ type Msg
   | LoginMessage String
   | Login
   | UpdateUserName String
+  | Logout

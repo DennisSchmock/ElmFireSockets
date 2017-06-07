@@ -50,6 +50,9 @@ update msg model =
             {model| userName = uName  }
         in
           (newModel,Cmd.none)
+
+    Logout->
+      ({model | user = Nothing}, Cmd.none)
     Login ->
       let
         payload = JE.object [
