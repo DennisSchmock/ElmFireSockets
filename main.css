@@ -1,0 +1,74 @@
+.mainChatClientContainer {
+    font-family: sans-serif;
+    border: 1px;
+    border-color: rgb(0, 0, 0);
+}
+
+.mainChatClientContainer  * {
+    box-sizing: border-box;
+}
+
+.mainChatWindowContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.mainChatsList > li {
+    list-style-type: none;
+}
+
+.mainChat {
+    background-color: rgb(227, 230, 235);
+    display: inline-block;
+    width: 30em;
+    height: 20em;
+    align-self: center;
+}
+
+.mainChat > h2 {
+    margin: 0px;
+    background-color: rgb(18, 128, 161);
+    padding: 0.5em;
+    color: rgb(255, 255, 255);
+}
+
+.mainMessages {
+    padding: 1em;
+}
+
+.mainMessageUser {
+    font-weight: bold;
+}
+
+.mainMessageBody {
+    color: rgb(0, 0, 0);
+}
+
+.mainRoster {
+    width: 10em;
+    display: inline-block;
+    padding: 1em;
+}
+
+.mainRoster > ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.mainRoster > ul > li {
+    list-style-type: none;
+}
+
+.mainRosterUser {
+    padding: 0.5em;
+    color: rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+.mainRosterUser.mainListening {
+    font-weight: bold;
+}
+
+.mainChatInput {
+    width: 100%;
+}
