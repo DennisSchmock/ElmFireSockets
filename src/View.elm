@@ -16,7 +16,7 @@ import Models
     Html.CssHelpers.withNamespace "dreamwriter"
 
 userList : List String
-userList = ["Dennis","Henrik","Nogen Andre","a","dasfsda"]
+userList = ["Dennis","MockHans 1","MochHans 2","MockHans 3","MockHans 4"]
 
 
 
@@ -29,6 +29,7 @@ view model =
     , Grid.row [][
         Grid.col[Col.xs8][]
       ,Grid.col[][loginField model] ]
+    , Grid.row [][Grid.col [][]]
     , Grid.row []
       [Grid.col[Col.xs2][]
       ,Grid.col[ Col.xs8][
@@ -41,16 +42,20 @@ view model =
 
 messageInputView : Model -> Html Msg
 messageInputView model =
-    form [ onSubmit PostChatMessage ]
-    [input[
-      placeholder "message..."
-      , autofocus True
-      , value model.userMessage
-      , onInput UpdateUserMessage
-      , id [MyCss.MessageInput]
+  case model.user of
+    Just user ->
+      form [ onSubmit PostChatMessage ]
+      [input[
+        placeholder "message..."
+        , autofocus True
+        , value model.userMessage
+        , onInput UpdateUserMessage
+        , id [MyCss.MessageInput]
 
 
       ][]]
+    Nothing ->
+      div [][text "Login to use the chat"]
 
 messagesView : Model -> Html Msg
 messagesView model =
